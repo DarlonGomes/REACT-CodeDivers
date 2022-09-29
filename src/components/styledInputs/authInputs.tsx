@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { TextInput, SecretInput, OpenEye, ClosedEye, Wrapper } from "../style";
+import { TextInput, SecretInput, OpenEye, ClosedEye, Wrapper } from "./style";
 
 interface Props {
   type: string;

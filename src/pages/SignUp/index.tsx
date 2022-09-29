@@ -1,7 +1,7 @@
 import React from "react";
 
 import diving from "../../assets/diving.png";
-import SignUpForm from "../../components/forms/auth/signUp";
+import { SignUpForm } from "../../features/authentication/components";
 import { Ambient, Banner, HomeContent } from "../../styles/globalStyle";
 
 export default function SignUpPage() {
