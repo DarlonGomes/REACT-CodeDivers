@@ -1,10 +1,11 @@
-import React from "react";
+import * as React from "react";
 
-import diving from "../../assets/diving.png";
-import { SignUpForm } from "../../features/authentication/components";
-import { Ambient, Banner, HomeContent } from "../../styles/globalStyle";
+import diving from "../assets/diving.png";
+import { SignUpForm } from "../features/authentication/components";
+import { Ambient } from "../layouts";
+import { Banner, HomeContent } from "../layouts/auth";
 
-export default function SignUpPage() {
+export default function SignUpPage(): JSX.Element {
   return (
     <Ambient>
       <HomeContent>

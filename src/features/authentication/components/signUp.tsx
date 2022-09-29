@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   NonPrivateInput,
   PrivateInput,
-} from "../../../components/styledInputs";
+} from "../../../components/inputs";
 import { Button, Form, Options } from "./style";
 
 interface FormValue {
