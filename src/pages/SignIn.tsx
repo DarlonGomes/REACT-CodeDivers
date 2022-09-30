@@ -1,8 +1,9 @@
-import React from "react";
+import * as React from "react";
 
-import diving from "../../assets/diving.png";
-import { SignInForm } from "../../features/authentication/components";
-import { Ambient, Banner, HomeContent } from "../../styles/globalStyle";
+import diving from "../assets/diving.png";
+import { SignInForm } from "../features/authentication/components";
+import { Ambient } from "../layouts";
+import { Banner, HomeContent } from "../layouts/auth";
 
 export default function SignInPage() {
   return (
