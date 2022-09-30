@@ -1,11 +1,21 @@
 import React from "react";
 
-import { Container } from "./style";
+import diving from "../../../../assets/diving.png";
+import { Category } from "../../../../components/menus";
+import { Container, Logotipo } from "./style";
 
 function MainMenu() {
   return (
     <Container>
-      <p>Menu</p>
+      <Logotipo>
+        <img src={diving} alt="CodeDivers" />
+      </Logotipo>
+      <Category text="Home" />
+      <Category text="Explore" />
+      <Category text="Notifications" />
+      <Category text="Practice" />
+      <Category text="Profile" />
+      <Category text="More" />
     </Container>
   );
 }

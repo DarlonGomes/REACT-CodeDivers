@@ -26,12 +26,13 @@ const GlobalStyles = createGlobalStyle`
         --bg: #09203F;
         --bg-linear: linear-gradient(to top, #09203f 0%, #537895 100%);
         --bg-post: rgba(255, 255, 255, 0.2);
+        --bg-category: rgba(0, 0, 0, 0.05);
         --bg-input-default: rgba(0, 0, 0, 0.1);
         --bg-input-disabled: rgba(0,0,0, 0.5);
         --input-text: #fafafa;
         --input-disabled: #dfdfdf;
         --input-border: rgba(255, 255, 255, 0.4);
-        --input-focus-border: rgba(255, 255, 255, 0.7);
+        --input-focus-border: rgba(255, 255, 255, 0.5);
         --input-eye: rgba(255, 255, 255, 0.6);
 
         --text-black: #000000;

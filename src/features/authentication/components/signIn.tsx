@@ -2,10 +2,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import {
-  NonPrivateInput,
-  PrivateInput,
-} from "../../../components/inputs";
+import { NonPrivateInput, PrivateInput } from "../../../components/inputs";
 import { Button, Form, Options } from "./style";
 
 interface FormValue {

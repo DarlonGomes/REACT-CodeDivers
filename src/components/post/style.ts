@@ -8,7 +8,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   min-height: 150px;
-  border-top: 1px solid var(--border-feed);
+  border-bottom: 1px solid var(--border-feed);
   padding: 15px;
   display: flex;
 `;
