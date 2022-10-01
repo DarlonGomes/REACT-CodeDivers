@@ -12,7 +12,6 @@ function CodePage() {
   return (
     <Ambient>
       <CodeHeader />
-      <NavBar />
       <Box>
         <QuestionStatement />
         <CodeEditor />

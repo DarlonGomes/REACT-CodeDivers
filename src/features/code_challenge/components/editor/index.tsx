@@ -7,59 +7,39 @@ import "ace-builds/src-noconflict/theme-cobalt";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/theme-idle_fingers";
 import "ace-builds/src-noconflict/theme-tomorrow_night_blue";
-import { Container } from "./style";
 
-function CodeEditor() {
-  const [values, setValues] = React.useState(`function alfa(arr){
-    for(let i = 0; i < arr.length; i ++){
-      if(arr[i] === "Giggs){
-        return true
-      }
-    }
-    return false
-}`);
-
-  const handleChange = (value: string) => {
-    setValues(value);
-  };
-  console.log(values);
-
-  const handleSubmit = () => {
-    alert(values);
-  };
+interface Props {
+  value: string;
+  collapse: string;
+}
+function EditorComponent(props: Props) {
+  const { value, collapse } = props;
   return (
-    <Container>
-      <AceEditor
-        placeholder=""
-        mode="javascript"
-        theme="cobalt"
-        name="blah2"
-        onChange={(value: string) => handleChange(value)}
-        fontSize={17}
-        showPrintMargin
-        showGutter
-        highlightActiveLine
-        value={values}
-        setOptions={{
-          enableBasicAutocompletion: false,
-          enableLiveAutocompletion: false,
-          enableSnippets: false,
-          showLineNumbers: true,
-          tabSize: 2,
-        }}
-        style={{
-          width: "100%",
-        }}
-      />
-      <button
-        type="submit"
-        onClick={() => handleSubmit()}
-        style={{ width: "50px", height: "100px" }}
-      >
-        Submit
-      </button>
-    </Container>
+    <AceEditor
+      placeholder=""
+      mode="javascript"
+      theme="cobalt"
+      name="blah2"
+      fontSize={19}
+      showPrintMargin
+      showGutter
+      highlightActiveLine={false}
+      value={value}
+      setOptions={{
+        enableBasicAutocompletion: false,
+        enableLiveAutocompletion: false,
+        enableSnippets: false,
+        showLineNumbers: true,
+        tabSize: 2,
+      }}
+      style={{
+        width: "100%",
+        height: collapse,
+        lineHeight: "21px",
+        letterSpacing: "1px",
+      }}
+    />
   );
 }
 
-export default CodeEditor;
+export default EditorComponent;
