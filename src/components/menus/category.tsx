@@ -23,9 +23,9 @@ export default function Category(props: Props) {
   return (
     <Container>
       <Wrapper
-        status={isActive}
         onMouseEnter={() => setActivity(true)}
         onMouseLeave={() => setActivity(false)}
+        style={{ backgroundColor: isActive ? "var(--bg-category)" : "" }}
       >
         {text === "Home" && <HomeIcon />}
         {text === "Explore" && <SearchIcon />}

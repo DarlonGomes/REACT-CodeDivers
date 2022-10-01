@@ -1,11 +1,23 @@
 import React from "react";
 
-import { Ambient } from "../layouts";
+import {
+  CodeEditor,
+  QuestionStatement,
+  CodeHeader,
+  NavBar,
+} from "../features/code_challenge/components";
+import { Ambient, Box } from "../layouts";
 
 function CodePage() {
   return (
     <Ambient>
-      <p>Oi</p>
+      <CodeHeader />
+      <NavBar />
+      <Box>
+        <QuestionStatement />
+        <CodeEditor />
+      </Box>
+      <NavBar />
     </Ambient>
   );
 }
