@@ -6,8 +6,8 @@ export const Ambient = styled.div`
   box-sizing: border-box;
   background-image: var(--bg-linear);
   position: relative;
-  overflow-x: hidden;
   top: 0;
+  overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
   ::-webkit-scrollbar {

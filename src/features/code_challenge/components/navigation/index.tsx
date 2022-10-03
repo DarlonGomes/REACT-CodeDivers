@@ -1,11 +1,13 @@
 import React from "react";
 
-import { Container } from "./style";
+import { Container, Return, Exercise, Forward } from "./style";
 
 function NavBar() {
   return (
     <Container>
-      <p>Oi</p>
+      <Return>Go back</Return>
+      <Exercise> Exercise number 2</Exercise>
+      <Forward> Go to the next exercise</Forward>
     </Container>
   );
 }

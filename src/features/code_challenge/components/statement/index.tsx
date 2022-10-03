@@ -1,11 +1,24 @@
 import React from "react";
 
-import { Container } from "./style";
+import { Container, Title, Description } from "./style";
 
-function QuestionStatement() {
+interface Description {
+  text: string;
+}
+
+interface Props {
+  title: string;
+  paragraphs: Description[];
+}
+
+function QuestionStatement(props: Props) {
+  const { title, paragraphs } = props;
   return (
     <Container>
-      <p>Oi</p>
+      <Title>{title} </Title>
+      {paragraphs.map((e) => (
+        <Description>{e.text}</Description>
+      ))}
     </Container>
   );
 }
