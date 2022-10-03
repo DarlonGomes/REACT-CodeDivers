@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.2",
     "@types/react-router-dom": "^5.3.3",
     "ace-builds": "^1.11.2",
     "axios": "^0.27.2",

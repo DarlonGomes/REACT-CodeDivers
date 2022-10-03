@@ -1,13 +1,28 @@
 import React from "react";
 
-import { Container, Return, Exercise, Forward } from "./style";
+import {
+  Container,
+  Return,
+  Exercise,
+  Forward,
+  ArrowBack,
+  ArrowForward,
+} from "./style";
 
 function NavBar() {
   return (
     <Container>
-      <Return>Go back</Return>
-      <Exercise> Exercise number 2</Exercise>
-      <Forward> Go to the next exercise</Forward>
+      <Return>
+        <ArrowBack />
+        <p>Go back</p>
+      </Return>
+      <Exercise>
+        <p>Exercise number 2</p>
+      </Exercise>
+      <Forward>
+        <p>Go to the next exercise</p>
+        <ArrowForward />
+      </Forward>
     </Container>
   );
 }
