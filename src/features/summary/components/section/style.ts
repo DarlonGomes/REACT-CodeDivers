@@ -13,7 +13,7 @@ const Container = styled.div`
 const Title = styled.h2`
   font-family: "Lexend";
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text-primary);
 `;
 

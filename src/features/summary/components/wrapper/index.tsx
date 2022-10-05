@@ -9,12 +9,14 @@ interface Props {
 
 interface Infos {
   title: string;
-  issues: Issues[];
+  methods: Methods[];
 }
-interface Issues {
+interface Methods {
   image: string;
   title: string;
   description: string;
+  progress: number;
+  id: string;
 }
 
 function Wrapper(props: Props) {
@@ -22,7 +24,7 @@ function Wrapper(props: Props) {
   return (
     <Container>
       {infos.map((e) => (
-        <Section title={e.title} issues={e.issues} />
+        <Section title={e.title} methods={e.methods} />
       ))}
     </Container>
   );

@@ -13,6 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
