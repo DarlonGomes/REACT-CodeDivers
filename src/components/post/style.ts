@@ -13,11 +13,13 @@ const Container = styled.div`
   display: flex;
 `;
 
-const UserImage = styled.div`
+const UserImage = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: wheat;
+  object-fit: cover;
+  border: 1px solid var(--border-user);
+  padding: 1px;
 `;
 
 const LeftSide = styled.div`

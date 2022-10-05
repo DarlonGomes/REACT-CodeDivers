@@ -15,39 +15,41 @@ import {
   Ellipsis,
 } from "./style";
 
-function Post() {
+interface Props {
+  userImage: string;
+  userName: string;
+  date: string;
+  text: string;
+  likeCount: number;
+  commentCount: number;
+}
+
+function Post(props: Props) {
+  const { userImage, userName, date, text, likeCount, commentCount } = props;
   return (
     <Container>
       <LeftSide>
-        <UserImage />
+        <UserImage src={userImage} alt="userIcon" />
       </LeftSide>
       <Informative>
         <UserBar>
           <div className="text">
-            <h4>Username</h4>
-            <p>Sep 29</p>
+            <h4>{userName}</h4>
+            <p>{date}</p>
           </div>
           <Ellipsis />
         </UserBar>
         <TextArea>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing
-          </p>
+          <p>{text}</p>
         </TextArea>
         <OptionBar>
           <Option>
             <Heart />
-            <p>100</p>
+            <p>{likeCount}</p>
           </Option>
           <Option>
             <Comment />
-            <p>67</p>
+            <p>{commentCount}</p>
           </Option>
         </OptionBar>
       </Informative>

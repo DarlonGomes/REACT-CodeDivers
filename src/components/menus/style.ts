@@ -25,7 +25,6 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0 20px;
   cursor: pointer;
-  background-color: ${(props) => (props.status ? "var(--bg-category)" : "")};
   border-radius: 15px;
   gap: 10px;
 `;

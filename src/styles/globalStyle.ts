@@ -29,6 +29,12 @@ const GlobalStyles = createGlobalStyle`
         --bg-category: rgba(0, 0, 0, 0.05);
         --bg-input-default: rgba(0, 0, 0, 0.1);
         --bg-input-disabled: rgba(0,0,0, 0.5);
+        --bg-button-unselected: rgba(0, 34, 64, 0.2);
+        --bg-button-selected: #002240;
+        --bg-code-nav: #002240;
+        --bg-statement: rgba(0, 0, 0, 0.5);
+        --bg-scrollbar: rgba(255, 255, 255, 0.3)
+;
         --input-text: #fafafa;
         --input-disabled: #dfdfdf;
         --input-border: rgba(255, 255, 255, 0.4);
@@ -39,8 +45,13 @@ const GlobalStyles = createGlobalStyle`
         --text-white: #ffffff;
         --text-post-info: #C1CAD1;
         --text-primary: #e7e9ea;
+        --text-secondary: #99ABB6;
+        --text-unselected: rgba(231, 233, 234, 0.2);
+        
 
         --border-feed: rgba(255, 255, 255, 0.1);
+        --border-editor: rgba(255, 255, 255, 0.3);
+        --border-user: rgba(255, 255, 255, 0.5);
     }
 `;
 
