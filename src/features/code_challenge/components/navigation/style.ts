@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100vw;
   height: 6vh;
-  background-color: var(--input-eye);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
