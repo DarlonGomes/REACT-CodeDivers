@@ -33,8 +33,9 @@ const GlobalStyles = createGlobalStyle`
         --bg-button-selected: #002240;
         --bg-code-nav: #002240;
         --bg-statement: rgba(0, 0, 0, 0.5);
-        --bg-scrollbar: rgba(255, 255, 255, 0.3)
-;
+        --bg-scrollbar: rgba(255, 255, 255, 0.3);
+        --bg-button-run: rgba(91, 214, 47, 0.7);
+
         --input-text: #fafafa;
         --input-disabled: #dfdfdf;
         --input-border: rgba(255, 255, 255, 0.4);

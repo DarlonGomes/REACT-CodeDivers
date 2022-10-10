@@ -5,9 +5,9 @@ import {
   SignInPage,
   SignUpPage,
   HomePage,
-  CodePage,
   SummaryPage,
-  ModulePage,
+  MethodPage,
+  ChallengePage,
 } from "../../pages";
 
 export default function RouterNavigator() {
@@ -16,9 +16,9 @@ export default function RouterNavigator() {
       <Route path="/sign-up" element={<SignUpPage />} />
       <Route path="/sign-in" element={<SignInPage />} />
       <Route path="/home" element={<HomePage />} />
-      <Route path="/code" element={<CodePage />} />
+      <Route path="/challenge" element={<ChallengePage />} />
       <Route path="/summary" element={<SummaryPage />} />
-      <Route path="/module" element={<ModulePage />} />
+      <Route path="/method" element={<MethodPage />} />
     </Routes>
   );
 }

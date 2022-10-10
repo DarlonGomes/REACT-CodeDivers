@@ -2,23 +2,17 @@ import React from "react";
 
 import { Container, Title, Description } from "./style";
 
-interface Description {
-  text: string;
-}
-
 interface Props {
   title: string;
-  paragraphs: Description[];
+  description: string;
 }
 
 function QuestionStatement(props: Props) {
-  const { title, paragraphs } = props;
+  const { title, description } = props;
   return (
     <Container>
       <Title>{title} </Title>
-      {paragraphs.map((e) => (
-        <Description>{e.text}</Description>
-      ))}
+      <Description>{description}</Description>
     </Container>
   );
 }

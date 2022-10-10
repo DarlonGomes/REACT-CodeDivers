@@ -1,27 +1,37 @@
 import React from "react";
 
-import Issue from "../issue";
+import Method from "../method";
 import { Container, Carousel, Title } from "./style";
 
 interface Props {
   title: string;
-  issues: Issues[];
+  methods: Methods[];
 }
 
-interface Issues {
+interface Methods {
   image: string;
   title: string;
   description: string;
+  id: string;
+  progress: number;
 }
 
 function Section(props: Props) {
-  const { title, issues } = props;
+  const { title, methods } = props;
+
   return (
     <Container>
       <Title>{title} </Title>
       <Carousel>
-        {issues.map((e) => (
-          <Issue image={e.image} title={e.title} description={e.description} />
+        {methods.map((e) => (
+          <Method
+            id={e.id}
+            image={e.image}
+            title={e.title}
+            description={e.description}
+            progress={e.progress}
+            key={e.id}
+          />
         ))}
       </Carousel>
     </Container>

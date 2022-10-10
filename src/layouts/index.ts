@@ -22,6 +22,15 @@ export const ContentWrapper = styled.div`
   justify-content: center;
 `;
 
+export const ContentWrapperDinamic = styled.div`
+  height: 97vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Box = styled.div`
   width: 100%;
   height: 87vh;
