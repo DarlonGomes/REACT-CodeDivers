@@ -12,6 +12,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   min-height: 30px;
+  position: relative;
 `;
 
 export { Container, Wrapper };

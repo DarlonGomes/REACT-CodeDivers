@@ -28,9 +28,9 @@ function EditorComponent(props: Props) {
       value={value}
       onChange={onChange}
       setOptions={{
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true,
-        enableSnippets: true,
+        enableBasicAutocompletion: false,
+        enableLiveAutocompletion: false,
+        enableSnippets: false,
         showLineNumbers: true,
         tabSize: 2,
       }}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   Container,
@@ -10,14 +11,19 @@ import {
 } from "./style";
 
 function NavBar() {
+  const navigate = useNavigate();
   return (
     <Container>
-      <Return>
+      <Return
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
         <ArrowBack />
         <p>Go back</p>
       </Return>
       <Exercise>
-        <p>Exercise number 2</p>
+        <p>Exercise number ??</p>
       </Exercise>
       <Forward>
         <p>Go to the next exercise</p>

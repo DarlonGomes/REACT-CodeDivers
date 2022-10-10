@@ -12,8 +12,8 @@ interface Methods {
   image: string;
   title: string;
   description: string;
-  progress: number;
   id: string;
+  progress: number;
 }
 
 function Section(props: Props) {
@@ -30,6 +30,7 @@ function Section(props: Props) {
             title={e.title}
             description={e.description}
             progress={e.progress}
+            key={e.id}
           />
         ))}
       </Carousel>

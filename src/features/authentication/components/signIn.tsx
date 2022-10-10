@@ -1,18 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-unescaped-entities */
+import { AxiosResponse } from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { NonPrivateInput, PrivateInput } from "../../../components/inputs";
+import { local } from "../../../utils";
+import { FormSignIn, SignInResponse } from "../interface";
+import { signIn } from "../services";
 import { Button, Form, Options } from "./style";
 
-interface FormValue {
-  email: string;
-  password: string;
-}
 export default function SignInForm() {
   const navigate = useNavigate();
   const [status, setStatus] = useState(false);
-  const [values, setValues] = useState<FormValue>({
+  const [values, setValues] = useState<FormSignIn>({
     email: "",
     password: "",
   });
@@ -21,16 +22,30 @@ export default function SignInForm() {
     (prop: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
       setValues({ ...values, [prop]: event.target.value });
     };
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     setStatus((prev) => !prev);
-    setValues({
-      email: "",
-      password: "",
-    });
-    setTimeout(() => {
-      navigate("/sign-in");
-    }, 2000);
+    try {
+      const response: AxiosResponse<SignInResponse, any> = await signIn(values);
+      local.storeData(response.data);
+
+      setTimeout(() => {
+        setStatus((prev) => !prev);
+        setValues({
+          email: "",
+          password: "",
+        });
+        navigate("/summary");
+      }, 2000);
+    } catch (error) {
+      console.log(error);
+      setStatus((prev) => !prev);
+      setValues({
+        email: "",
+        password: "",
+      });
+      alert("Error");
+    }
   };
 
   return (

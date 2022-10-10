@@ -15,7 +15,7 @@ function Method(props: Props) {
   const { image, title, description, progress, id } = props;
   const navigate = useNavigate();
   return (
-    <Container onClick={() => navigate(`/methods?${id}`)}>
+    <Container onClick={() => navigate(`/method?id=${id}`)}>
       <Image src={image} alt="image" />
       <Title>{title}</Title>
       <Description>{description}</Description>

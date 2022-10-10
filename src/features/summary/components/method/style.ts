@@ -14,6 +14,9 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
+  :hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 `;
 
 const Image = styled.img`

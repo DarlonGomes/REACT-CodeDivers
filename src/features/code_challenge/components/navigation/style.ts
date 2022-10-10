@@ -13,6 +13,7 @@ const Container = styled.div`
 `;
 
 const Return = styled.div`
+  width: 210px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -21,9 +22,14 @@ const Return = styled.div`
     font-size: 16px;
     color: var(--text-primary);
   }
+  :hover {
+    text-decoration: underline var(--text-primary) 1px;
+    cursor: pointer;
+  }
 `;
 
 const Forward = styled.div`
+  width: 210px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -31,6 +37,10 @@ const Forward = styled.div`
     font-family: "Lexend";
     font-size: 16px;
     color: var(--text-primary);
+  }
+  :hover {
+    text-decoration: underline var(--text-primary) 1px;
+    cursor: pointer;
   }
 `;
 
